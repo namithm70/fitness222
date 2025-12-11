@@ -69,7 +69,9 @@ const Layout = () => {
           <Link to="/" className="brand-mark">
             <span>FitWorkout</span>
           </Link>
-          <p className="brand-subtitle">Movement + nourishment for modern lives</p>
+          <div className="brand-lockup">
+            <span className="brand-pill">Holistic Studio</span>
+          </div>
         </div>
         <nav className="site-nav">
           {navLinks.map((link) => (

@@ -15,16 +15,17 @@
   padding: 1.5rem 4vw;
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(12, 12, 12, 0.06);
+  box-shadow: 0 10px 30px rgba(15, 15, 15, 0.05);
   z-index: 10;
 }
 
 .logo-cluster {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.4rem;
 }
 
 .brand-mark {
@@ -34,26 +35,64 @@
   letter-spacing: -0.02em;
 }
 
-.brand-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.brand-pill {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 92, 122, 0.12);
+  color: #ff5c7a;
+  font-weight: 600;
 }
 
 .site-nav {
   display: flex;
-  gap: 1rem;
+  gap: 0.35rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: rgba(12, 12, 12, 0.05);
+  border: 1px solid rgba(12, 12, 12, 0.05);
 }
 
 .nav-link {
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 1.05rem;
   border-radius: 999px;
-  color: var(--text-muted);
+  color: #555;
   font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #111;
+  transform: translateY(-1px);
 }
 
 .nav-link.active {
-  background: #111;
+  background: linear-gradient(135deg, #ff5c7a, #ff8b6b);
   color: #fff;
+  box-shadow: 0 10px 20px rgba(255, 92, 122, 0.25);
+}
+
+.nav-link.active::after {
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .site-main {
