@@ -113,13 +113,16 @@ const Layout = () => {
         <div className="search-overlay" onClick={closeSearch}>
           <div className="search-panel" onClick={(e) => e.stopPropagation()}>
             <div className="search-panel-header">
-              <input
-                autoFocus
-                type="text"
-                placeholder="Search workouts or recipes..."
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
-              />
+              <div className="search-field">
+                <span className="search-icon">⌕</span>
+                <input
+                  autoFocus
+                  type="text"
+                  placeholder="Search workouts or recipes..."
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                />
+              </div>
               <button className="ghost-button" onClick={closeSearch}>
                 Esc
               </button>
