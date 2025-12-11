@@ -10,6 +10,14 @@ This project is ready to deploy on Vercel!
    - Import the repository: `https://github.com/namithm70/fitness222.git`
 
 2. **Configure the project:**
+   - **Root Directory:** Leave as root (`.`)
+   - The `vercel.json` at the root will handle the build configuration automatically
+   - Vercel will use the settings from `vercel.json`:
+     - Build Command: `cd web && npm install && npm run build`
+     - Output Directory: `web/dist`
+     - Install Command: `cd web && npm install`
+
+   **OR** if you prefer to set Root Directory to `web`:
    - **Root Directory:** Set to `web`
    - **Framework Preset:** Vite (should auto-detect)
    - **Build Command:** `npm run build` (default)
